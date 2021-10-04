@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-import DownloadButton from './DownloadButton';
+import { DownloadButton } from './DownloadButton';
 import DownloadButtonDefault from './DownloadButtonDefault';
 import DownloadButtonInvalid from './DownloadButtonInvalid';
 
@@ -12,6 +12,7 @@ function App() {
     const id = videoUrl.replace("https://youtu.be/", "")
     setId(id);
   }, [videoUrl])
+
   return (
     <div className="App">
       <div className="Navbar">
@@ -33,10 +34,10 @@ function App() {
           <div>
             {videoUrl.startsWith("https://youtu.be/") ? (<div>
               <DownloadButton id={id} type="mp3" />
-              <DownloadButton id={id} type="videos" /></div>
-              ) : (
+              <DownloadButton id={id} type="mp4" /></div>
+            ) : (
               <DownloadButtonInvalid />
-              )}
+            )}
           </div>
         )}
 
@@ -47,6 +48,6 @@ function App() {
   );
 }
 <footer>
-    © Mathoolika Vasigaran
+  © Mathoolika Vasigaran
 </footer>
 export default App;
