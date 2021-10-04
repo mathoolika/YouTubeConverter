@@ -1,7 +1,8 @@
 .App {
+  height: 100vh;
   text-align: center;
   background-image: linear-gradient(to bottom right, pink, lightblue, lightgreen);
-  padding-bottom: 100%;
+  /*padding-bottom: 100%;*/
 }
 
 .Navbar{
